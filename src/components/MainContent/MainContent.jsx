@@ -1,18 +1,11 @@
+import { Summary } from "../Summary/Summary"
+
 export const MainContent = () => {
     return (
         <>
-            <main className="main-container">
+          <main className="main-container">
       {/* <!-- summary --> */}
-      <div className="summary-container">
-        <div className="summary-container__card">
-          <span className="title">back-end</span>
-          <span className="value">1</span>
-        </div>
-        <div className="summary-container__card">
-          <span className="title">total</span>
-          <span className="value">1</span>
-        </div>
-      </div>
+      <Summary />
 
       {/* <!-- filter --> */}
       <div className="filter-container">
