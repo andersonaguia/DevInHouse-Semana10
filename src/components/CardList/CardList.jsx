@@ -1,7 +1,10 @@
-export const CardList = () => {
+import PropTypes from "prop-types"
+export const CardList = ({ children }) => {
     return (
-        <div>
-            <h1>CardList</h1>
-        </div>
+        <ul className="cardList">{ children }</ul>
     )
+}
+
+CardList.propTypes = {
+    children: PropTypes.node
 }
