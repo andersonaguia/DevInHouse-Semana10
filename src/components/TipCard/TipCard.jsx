@@ -1,29 +1,30 @@
 import PropTypes from 'prop-types'
 
-export const TipCard = ( { dica }) => {
+export const TipCard = ( {tip} ) => {
+  const { id, titulo, linguagem, categoria, descricao, video } = tip;
     return (
         <>
             <li className="tipcard-container">
-              <h2 className="title">{ dica.titulo }</h2>
+              <h2 className="title">{ titulo }</h2>
               <div className="metadata">
                 <div>
-                  Linguagem: <span className="metaValue">{ dica.linguagem }</span>
+                  Linguagem: <span className="metaValue">{ linguagem }</span>
                 </div>
                 <div>
-                  Categoria: <span className="metaValue">{ dica.categoria }</span>
+                  Categoria: <span className="metaValue">{ categoria }</span>
                 </div>
               </div>
               <div className="content">
-                { dica.descricao }
+                { descricao }
               </div>
               <div className="btn-group align-left">
-                <button className="btn primary" type="submit">
+                <button onClick={()=> console.log("oi")} className="btn primary" type="submit">
                   editar
                 </button>
-                <button className="btn secondary" type="submit">
+                <a href={video} className="btn secondary" type="submit">
                   YouTube
-                </button>
-                <button className="btn secondary" type="submit">
+                </a>
+                <button onClick={()=> console.log("oi")} className="btn secondary" type="submit">
                   apagar
                 </button>
               </div>
@@ -33,8 +34,9 @@ export const TipCard = ( { dica }) => {
 }
 
 TipCard.propTypes = {
-    dica: PropTypes.shape({
-        titulo: PropTypes.string,
+    tip: PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        titulo: PropTypes.string.isRequired,
         descricao: PropTypes.string.isRequired,
         categoria: PropTypes.string.isRequired,
         linguagem: PropTypes.string.isRequired,

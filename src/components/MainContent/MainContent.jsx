@@ -4,6 +4,7 @@ import { TipCard } from "../TipCard/TipCard"
 import { CardList } from "../CardList/CardList"
 
 const dica = {
+  id: 1,
   titulo: "FrontEnd",
   descricao: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque porro qui ullam cum, eos consequuntur.",
   categoria: "Frameworks",
@@ -18,9 +19,13 @@ export const MainContent = () => {
         <Summary />      
         <Filter />
         <CardList>
-          <TipCard dica={ dica }/> 
-        </CardList>
-          
+          <TipCard tip={dica}/> 
+          <TipCard tip={dica}/> 
+          <TipCard tip={dica}/> 
+          <TipCard tip={dica}/> 
+          <TipCard tip={dica}/> 
+          <TipCard tip={dica}/> 
+        </CardList>          
       </main>
     </>
   )
