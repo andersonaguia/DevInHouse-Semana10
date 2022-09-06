@@ -2,6 +2,7 @@ import { Summary } from "../Summary/Summary"
 import { Filter } from "../Filter/Filter"
 import { TipCard } from "../TipCard/TipCard"
 import { CardList } from "../CardList/CardList"
+import { useAppContext } from "../../contexts/app-context"
 
 const dica = {
   id: 1,
@@ -13,6 +14,8 @@ const dica = {
 }
 
 export const MainContent = () => {
+  const result = useAppContext()
+  console.log(result)
   return (
     <>
       <main className="main-container">      
