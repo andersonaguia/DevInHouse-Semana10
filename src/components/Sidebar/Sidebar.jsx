@@ -2,9 +2,10 @@ import PropTypes from 'prop-types'
 import { useForm } from 'react-hook-form'
 
 export const Sidebar = () => {
-  const { register, handleSubmit } = useForm()
-  const handleCreateTip = (data) => {
-    console.log(data)
+  const { register, handleSubmit, reset } = useForm()
+ 
+  const handleCreateTip = (dados) => {
+   console.log(dados)
   }
 
   return (
@@ -49,7 +50,7 @@ export const Sidebar = () => {
             <button className="btn primary" type="submit">
               salvar
             </button>
-            <button className="btn secondary" type="reset">
+            <button onClick={() => reset()} className="btn secondary" type='reset'>
               limpar
             </button>
           </div>
